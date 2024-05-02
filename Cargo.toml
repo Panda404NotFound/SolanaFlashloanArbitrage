@@ -6,3 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+solana-sdk = "1.14.10"
+solana-client = "1.14.10"
+mango-v4 = "0.1.0"
