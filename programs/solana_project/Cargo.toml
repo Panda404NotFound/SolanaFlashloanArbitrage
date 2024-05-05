@@ -13,7 +13,29 @@ no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
 cpi = ["no-entrypoint"]
-default = []
+default = ["custom-heap"]
+test-bpf = ["client"]
+client = ["solana-sdk", "no-entrypoint"]
+# Enables GPL-licensed parts of the code. See LICENSE file.
+enable-gpl = ["openbook-v2/enable-gpl"]
+custom-heap = []
 
 [dependencies]
-anchor-lang = "0.29.0"
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+
+serum_dex = { workspace = true, features = ["no-entrypoint", "program"] }
+solana-address-lookup-table-program = { workspace = true }
+solana-program = { workspace = true }
+solana-sdk = { workspace = true, default-features = false, optional = true }
+
+mango-v4 = { workspace = true, features = ["client"] }
+openbook-v2 = { workspace = true, features = ["no-entrypoint", "cpi", "enable-gpl"] }
+
+[dev-dependencies]
+solana-sdk = { workspace = true, default-features = false }
+solana-program-test = { workspace = true }
+spl-token = { version = "^3.0.0", features = ["no-entrypoint"] }
+spl-associated-token-account = { version = "^1.0.3", features = [
+    "no-entrypoint",
+] }

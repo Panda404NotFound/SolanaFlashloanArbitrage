@@ -7,3 +7,6 @@ solana config set --url https://api.devnet.solana.com
 https://solana.com/developers/guides/getstarted/setup-local-development
 
 solana config set --url https://api.devnet.solana.com
+
+cargo build -p anchor-lang@0.28.0
+

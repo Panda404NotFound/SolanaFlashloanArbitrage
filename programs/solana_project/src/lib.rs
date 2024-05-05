@@ -74,3 +74,4 @@ let vaultAccount = get_vault_account(&mangoGroup.pubkey, tokenIndex);
 Таким образом, для идентификации "mango account" вам нужно создать его и получить публичный ключ, а для "vault account" - получить его адрес из объекта "mango group" или вычислить по публичному ключу группы и индексу токена.[2][3][8]
 
 */
+

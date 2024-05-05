@@ -1,8 +1,11 @@
 [toolchain]
 
 [features]
-seeds = false
+resolution = true
 skip-lint = false
+
+[programs.devnet]
+testlib = "4UmTu42bEuYQ4MJJaCzAJH7bXqxD33A6rmTKgdDuqbLN"
 
 [programs.localnet]
 solana_project = "AiYexktgCp74R5aUCwDh6T8yaXC2doZXEEgQdKV7jBmG"
@@ -11,8 +14,8 @@ solana_project = "AiYexktgCp74R5aUCwDh6T8yaXC2doZXEEgQdKV7jBmG"
 url = "https://api.devnet.solana.com"
 
 [provider]
-cluster = "devnet"
-wallet = "/Users/a1111/.config/solana/id.json"
+cluster = "Devnet"
+wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
